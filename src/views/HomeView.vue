@@ -37,5 +37,11 @@ import UsersList from '@/components/UsersList.vue';
   border: 1px solid rgba($color: #fff, $alpha: 0.1);
   backdrop-filter: blur(10px);
 
+
+  &__input {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba($color: $primary-text-color, $alpha: 0.2);
+  }
 }
 </style>
