@@ -38,6 +38,30 @@
   font-display: swap;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input {
+  color: #fff;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
 body {
   font-family: 'Montserrat', Arial, sans-serif;
 }

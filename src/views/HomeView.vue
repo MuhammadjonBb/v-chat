@@ -7,17 +7,35 @@ import UsersList from '@/components/UsersList.vue';
 <template>
   <main class="main">
     <div class="users">
-      <SearchPanel />
+      <SearchPanel class="users__input">
+      </SearchPanel>
       <UsersList />
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-.users {
+@import '@/assets/scss/variables.scss';
+
+.main {
   display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 5%;
+  background-color: $primary-color;
+}
+
+.users {
+  padding: 30px;
+  display: flex;
+  width: 40%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  background-color: rgba($color: #fff, $alpha: 0.07);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
+  border: 1px solid rgba($color: #fff, $alpha: 0.1);
+  backdrop-filter: blur(10px);
+
 }
 </style>
