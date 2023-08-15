@@ -4,7 +4,7 @@ import DefaultInput from '@/components/DefaultInput.vue';
 </script>
 
 <template>
-    <DefaultInput>
+    <DefaultInput placeholder="Поиск...">
         <span class="users__input-btn-icon">F</span>
     </DefaultInput>
 </template>

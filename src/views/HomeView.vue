@@ -7,8 +7,9 @@ import UsersList from '@/components/UsersList.vue';
 <template>
   <main class="main">
     <div class="users">
-      <SearchPanel class="users__input">
-      </SearchPanel>
+      <div class="users__search-wrap">
+        <SearchPanel class="users__input" />
+      </div>
       <UsersList />
     </div>
   </main>
@@ -26,10 +27,10 @@ import UsersList from '@/components/UsersList.vue';
 }
 
 .users {
-  padding: 30px;
   display: flex;
   width: 40%;
   flex-direction: column;
+  overflow: auto;
   align-items: center;
   background-color: rgba($color: #fff, $alpha: 0.07);
   border-radius: 10px;
@@ -37,11 +38,23 @@ import UsersList from '@/components/UsersList.vue';
   border: 1px solid rgba($color: #fff, $alpha: 0.1);
   backdrop-filter: blur(10px);
 
-
-  &__input {
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba($color: $primary-text-color, $alpha: 0.2);
+  &__search-wrap {
+    padding: 30px;
+    width: 100%;
   }
+}
+
+.users::-webkit-scrollbar {
+  width: 3px;
+}
+
+.users::-webkit-scrollbar-thumb {
+  background-color: rgba(125, 119, 129, 0.3);
+  border-radius: 2px;
+}
+
+.users::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Set the color of the thumb on hover */
 }
 </style>

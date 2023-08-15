@@ -27,9 +27,11 @@ function cutDate(date) {
     &__wrapper {
         position: relative;
         display: flex;
-        margin-bottom: 20px;
+        padding-top: 20px;
+        padding: 20px 30px 0 30px;
         align-items: flex-start;
         gap: 20px;
+        transition: background-color 0.3s ease;
     }
 
     &__img {
@@ -48,8 +50,8 @@ function cutDate(date) {
 
     &__last-message {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 15%;
+        right: 5%;
         font-size: 14px;
         font-weight: 500;
         color: rgba($color: $primary-text-color, $alpha: 0.7);
@@ -60,11 +62,13 @@ function cutDate(date) {
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        max-width: 90%;
         overflow: hidden;
         font-size: 14px;
         font-weight: 500;
         color: rgba($color: $primary-text-color, $alpha: 0.7);
         margin: 0;
+        line-height: 24px;
     }
 
     &__border {
@@ -74,5 +78,10 @@ function cutDate(date) {
         height: 1px;
         width: 100%;
     }
+}
+
+.user-item__wrapper:hover {
+    background-color: $dark-purple;
+    cursor: pointer;
 }
 </style>
