@@ -13,12 +13,13 @@ const user = computed(() => store.users.find(user => user.id == route.params.id)
 <template>
     <div class="chat__window" v-if="route.params.id">
         <ChatMessage v-for="(msg, index) in user.chat" :key="index" :msg="msg.message" :user="user" :author="msg.user_id"
-            :date="msg.date" />
+            :date="msg.date" :isNextReceived="user.chat[index + 1]?.user_id === msg.user_id" />
     </div>
 </template>
 
 <style lang="scss">
 .chat__window {
     overflow: auto;
+    padding: 30px;
 }
 </style>

@@ -1,21 +1,23 @@
 <script setup>
 import { computed } from 'vue';
 
-const { user, author, msg, date } = defineProps({
+const { user, author, msg, date, isNextReceived } = defineProps({
     user: Object,
     msg: String,
     author: Number,
-    date: String
+    date: String,
+    isNextReceived: Boolean
 })
 
 const cuttedTime = computed(() => date.slice(11, 16))
+console.log(isNextReceived);
 </script>
 
 <template>
     <div class="chat__message message" :class="{ 'message--received': author === user.id }">
-        <img :src="user.avatar" alt="" v-if="author === user.id" class="message__avatar">
+        <img :src="user.avatar" alt="" v-if="author === user.id && !isNextReceived" class="message__avatar">
         <div class="message__body">
-            <div class="message__name" v-if="author === user.id">{{ user.name }}</div>
+            <h4 class="message__name" v-if="author === user.id">{{ user.name }}</h4>
             <div class="message__text">{{ msg }}</div>
             <span class="message__time">{{ cuttedTime }}</span>
         </div>
@@ -26,7 +28,6 @@ const cuttedTime = computed(() => date.slice(11, 16))
 @import '@/assets/scss/variables.scss';
 
 .message {
-    padding: 15px;
     display: flex;
     gap: 20px;
 
@@ -36,6 +37,7 @@ const cuttedTime = computed(() => date.slice(11, 16))
         display: flex;
         max-width: 70%;
         margin: 0 0 0 auto;
+        margin-top: 15px;
         flex-direction: column;
         background-color: $dark-purple;
         border: 1px solid rgba(255, 255, 255, 0.05);
@@ -44,6 +46,8 @@ const cuttedTime = computed(() => date.slice(11, 16))
     }
 
     &__avatar {
+        position: absolute;
+        z-index: 2;
         width: 50px;
         height: 50px;
         border-radius: 15px;
@@ -59,6 +63,7 @@ const cuttedTime = computed(() => date.slice(11, 16))
     &__text {
         color: $secondary-text-color;
         font-weight: 500;
+        max-width: 80%;
         line-height: 28px;
     }
 
@@ -73,7 +78,7 @@ const cuttedTime = computed(() => date.slice(11, 16))
 }
 
 .message.message--received .message__body {
-    margin: 0 auto 0 0;
+    margin: 0 auto 5px 70px;
     background-color: $secondary-color;
     border-radius: 30px 30px 30px 2px;
 }
