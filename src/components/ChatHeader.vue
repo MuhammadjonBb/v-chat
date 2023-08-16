@@ -49,12 +49,16 @@ function calcLastActive() {
 @import '@/assets/scss/variables.scss';
 
 .header {
+    position: sticky;
+    top: 0;
     display: flex;
     width: 100%;
     padding: 30px;
     justify-content: space-between;
     gap: 20px;
     border-bottom: 1px solid rgba($color: $primary-text-color, $alpha: 0.5);
+    z-index: 2;
+    background-color: rgb(35, 29, 39);
 
     &__user {
         display: flex;

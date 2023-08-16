@@ -6,7 +6,6 @@ import ChatHeader from '@/components/ChatHeader.vue';
 import { useUsersStore } from '@/stores/users';
 
 const store = useUsersStore();
-console.log(store.users);
 </script>
 
 <template>
@@ -20,7 +19,7 @@ console.log(store.users);
       </div>
       <div class="chat">
         <ChatHeader v-if="store" :users="store.users" />
-        <ChatWindow />
+        <ChatWindow v-if="store" :users="store.users" />
       </div>
     </div>
   </main>
@@ -57,8 +56,12 @@ console.log(store.users);
   backdrop-filter: blur(10px);
 
   &__search-wrap {
+    position: sticky;
+    top: 0;
     padding: 30px;
     width: 100%;
+    z-index: 2;
+    background-color: rgb(35, 29, 39);
   }
 }
 
