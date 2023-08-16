@@ -84,4 +84,21 @@ function cutDate(date) {
     background-color: $dark-purple;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1280px) {
+    .user-item {
+        &__name {
+            font-size: 14px;
+        }
+
+        &__message {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        &__last-message {
+            font-size: 12px;
+        }
+    }
+}
 </style>

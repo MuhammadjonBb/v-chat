@@ -11,11 +11,20 @@ const store = useUsersStore();
   <main class="main">
     <div class="wrapper">
       <div class="users">
-        <UsersList />
+        <UsersList v-if="store.users" />
+        <div v-else class="chat-empty chat-empty--users">
+          <p class="chat-empty__text">Тут пусто </p>
+          <p class="chat-empty__text--small">Вы еще никому не писали</p>
+        </div>
       </div>
       <div class="chat">
-        <ChatHeader v-if="store" :users="store.users" />
-        <ChatWindow v-if="store" :users="store.users" />
+        <ChatHeader v-if="store && $route.params.id" :users="store.users" />
+        <ChatWindow v-if="store && $route.params.id" :users="store.users" />
+        <div class="chat-empty" v-else>
+          <img class="chat-empty__img" src="@/assets/img/mail.svg" alt="">
+          <p class="chat-empty__text">Чат не выбран</p>
+          <p class="chat-empty__text--small">Выберите чат, начните общение!</p>
+        </div>
       </div>
     </div>
   </main>
@@ -44,7 +53,6 @@ const store = useUsersStore();
   width: 40%;
   flex-direction: column;
   overflow: auto;
-  align-items: center;
   background-color: rgba($color: #fff, $alpha: 0.07);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
@@ -74,8 +82,42 @@ const store = useUsersStore();
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: rgba($color: #fff, $alpha: 0.07);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
+
+  &-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-empty__img {
+    width: 120px;
+    height: 90px;
+    margin-bottom: 60px;
+  }
+
+  &-empty__text {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &-empty__text--small {
+    margin: 0;
+    color: $primary-text-color;
+    font-weight: 500;
+  }
+
+  &-empty--users {
+    padding: 30px;
+    justify-content: start;
+    align-items: flex-start;
+  }
 }
 </style>

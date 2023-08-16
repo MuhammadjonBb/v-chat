@@ -41,7 +41,8 @@ function calcLastActive() {
             </div>
         </div>
 
-        <button class="header__btn btn">Связаться с поддержкой</button>
+        <button class="header__btn btn"><span class="header__btn--fulltext">Связаться с поддержкой</span> <span
+                class="header__btn--shorttext">Поддержка</span></button>
     </header>
 </template>
 
@@ -53,6 +54,7 @@ function calcLastActive() {
     top: 0;
     display: flex;
     width: 100%;
+    align-items: center;
     padding: 30px;
     justify-content: space-between;
     gap: 20px;
@@ -94,6 +96,10 @@ function calcLastActive() {
         color: $primary-text-color;
     }
 
+    &__btn--shorttext {
+        display: none;
+    }
+
     &__btn {
         padding: 15px 20px;
         color: #fff;
@@ -101,6 +107,41 @@ function calcLastActive() {
         border-radius: 15px;
         font-size: 14px;
         font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        &__name {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        &__btn--fulltext {
+            display: none;
+        }
+
+        &__btn--shorttext {
+            display: block;
+        }
+
+        &__btn {
+            padding: 12px 15px;
+            font-size: 12px;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+
+        &__name {
+            font-size: 13px;
+        }
     }
 }
 </style>

@@ -89,4 +89,18 @@ const cuttedTime = computed(() => date.slice(11, 16))
 .message.message--received .message__time {
     color: $primary-text-color;
 }
+
+@media screen and (max-width: 1280px) {
+    .message {
+        &__text {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        &__name {
+            display: none;
+        }
+    }
+
+}
 </style>

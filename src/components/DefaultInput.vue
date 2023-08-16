@@ -47,4 +47,10 @@ defineProps({
 .input::placeholder {
     font-weight: 500;
 }
+
+@media screen and (max-width: 1280px) {
+    .input::placeholder {
+        font-size: 14px;
+    }
+}
 </style>
