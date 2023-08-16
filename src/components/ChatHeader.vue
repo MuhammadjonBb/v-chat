@@ -34,6 +34,8 @@ function calcLastActive() {
 <template>
     <header class="chat__header header" v-if="user">
         <div class="header__user">
+            <button class="btn header__btn--back" @click="$router.go(-1)"><img src="@/assets/img/arrow.svg"
+                    alt="Назад"></button>
             <img :src="user.avatar" alt="avatar" class="header__avatar">
             <div class="header__user-info">
                 <h3 class="header__name">{{ user.name }}</h3>
@@ -108,6 +110,10 @@ function calcLastActive() {
         font-size: 14px;
         font-weight: 600;
     }
+
+    &__btn--back {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -133,16 +139,35 @@ function calcLastActive() {
             font-size: 12px;
             height: auto;
         }
+
+        &__btn--back {
+            display: block;
+        }
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
     .header {
         padding: 20px;
+        border-radius: 0;
 
         &__name {
             font-size: 13px;
         }
+
+        &__last-active {
+            font-size: 12px;
+        }
+
+        &__avatar {
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+
+        &__user {
+            gap: 0;
+        }
+
     }
 }
 </style>

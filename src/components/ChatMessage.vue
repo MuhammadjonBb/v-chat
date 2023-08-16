@@ -107,4 +107,34 @@ const cuttedTime = computed(() => date.slice(11, 16))
     }
 
 }
+
+@media screen and (max-width: 580px) {
+    .message {
+        gap: 10px;
+
+        &__text {
+            font-size: 13px;
+            line-height: 22px;
+        }
+
+        &__time {
+            right: 10px;
+            bottom: 10px;
+        }
+
+        &__body {
+            padding: 10px 55px 10px 15px;
+        }
+
+        &__avatar {
+            display: none;
+        }
+
+
+    }
+
+    .message.message--received .message__body {
+        margin: 0 auto 5px 0;
+    }
+}
 </style>

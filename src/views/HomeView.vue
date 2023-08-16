@@ -26,7 +26,7 @@ onUnmounted(() => {
     <div class="wrapper">
       <div class="users" v-if="!$route.params.id || screenWidth > 1025">
         <UsersList />
-        <div v-if="store.users.length" class="chat-empty chat-empty--users">
+        <div v-if="!store.users.length" class="chat-empty chat-empty--users">
           <p class="chat-empty__text">Тут пусто </p>
           <p class="chat-empty__text--small">Вы еще никому не писали</p>
         </div>
@@ -152,6 +152,17 @@ onUnmounted(() => {
     .users {
       width: 100%;
     }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .wrapper {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .users {
+    border-radius: 0;
   }
 }
 </style>

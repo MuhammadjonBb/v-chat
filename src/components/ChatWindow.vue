@@ -50,6 +50,17 @@ const user = computed(() => store.users.find(user => user.id == route.params.id)
 
     .chat__form {
         padding: 20px;
+        background-color: rgb(35, 29, 39);
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(35, 29, 39);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .chat__window {
+        padding: 20px 15px;
     }
 
 }
