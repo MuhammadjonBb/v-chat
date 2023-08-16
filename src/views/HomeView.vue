@@ -6,6 +6,7 @@ import ChatHeader from '@/components/ChatHeader.vue';
 import { useUsersStore } from '@/stores/users';
 
 const store = useUsersStore();
+console.log(store.users);
 </script>
 
 <template>
@@ -18,7 +19,7 @@ const store = useUsersStore();
         <UsersList />
       </div>
       <div class="chat">
-        <ChatHeader v-if="store.users" :users="store.users" />
+        <ChatHeader v-if="store" :users="store.users" />
         <ChatWindow />
       </div>
     </div>

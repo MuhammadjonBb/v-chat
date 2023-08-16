@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { watch, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
@@ -7,13 +7,15 @@ const route = useRoute();
 const { users } = defineProps({
     users: Array
 })
-const user = users.find(user => user.id == route.params.id)
+const user = ref(users.find(user => user.id == route.params.id))
+
+watch(() => route.params.id, () => {
+    user.value = users.find(user => user.id == route.params.id)
+})
 
 function calcLastActive() {
-    const lastActive = new Date(user.lastActive);
+    const lastActive = new Date(user.value.lastActive);
     const now = new Date();
-    // console.log(lastActive);
-    // console.log(now);
     const diff = now.getTime() - lastActive.getTime();
     const diffDays = Math.floor(diff / (1000 * 60 * 60 * 24));
 
@@ -27,8 +29,6 @@ function calcLastActive() {
         return `давно`;
     }
 }
-
-const lastActive = ref(calcLastActive());
 </script>
 
 <template>
@@ -37,9 +37,11 @@ const lastActive = ref(calcLastActive());
             <img :src="user.avatar" alt="avatar" class="header__avatar">
             <div class="header__user-info">
                 <h3 class="header__name">{{ user.name }}</h3>
-                <span class="header__last-active">Был(а) {{ lastActive }}</span>
+                <span class="header__last-active">Был(а) {{ calcLastActive() }}</span>
             </div>
         </div>
+
+        <button class="header__btn btn">Связаться с поддержкой</button>
     </header>
 </template>
 
@@ -50,6 +52,9 @@ const lastActive = ref(calcLastActive());
     display: flex;
     width: 100%;
     padding: 30px;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid rgba($color: $primary-text-color, $alpha: 0.5);
 
     &__user {
         display: flex;
@@ -81,6 +86,15 @@ const lastActive = ref(calcLastActive());
         font-size: 14px;
         font-weight: 500;
         color: $primary-text-color;
+    }
+
+    &__btn {
+        padding: 15px 20px;
+        color: #fff;
+        border: 1px solid rgba($color: $golden-color, $alpha: 0.80);
+        border-radius: 15px;
+        font-size: 14px;
+        font-weight: 600;
     }
 }
 </style>
