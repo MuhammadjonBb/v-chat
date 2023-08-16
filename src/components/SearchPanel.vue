@@ -5,7 +5,9 @@ import DefaultInput from '@/components/DefaultInput.vue';
 
 <template>
     <DefaultInput placeholder="Поиск...">
-        <span class="users__input-btn-icon">F</span>
+        <button class="input-btn btn" @click="$emit('onBtnClick')">
+            <span class="users__input-btn-icon">F</span>
+        </button>
     </DefaultInput>
 </template>
 

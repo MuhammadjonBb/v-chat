@@ -1,25 +1,23 @@
 <script setup>
-import { ref, defineEmits } from 'vue';
+import { defineEmits } from 'vue';
 
-defineEmits(['onInput'])
+defineEmits(['update:modelValue']);
 defineProps({
     placeholder: String,
+    modelValue: String
 })
 
-const value = ref('');
 </script>
 
 <template>
     <div class="input__wrapper">
-        <input type="text" :placeholder="placeholder" v-model="value" @change="$emit('valuonInput', value)"
-            class="input input__item">
-        <button class="input__btn btn">
-            <slot />
-        </button>
+        <input type="text" :placeholder="placeholder" :value="modelValue"
+            @input="$emit('update:modelValue', $event.target.value)" class="input input__item">
+        <slot />
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/variables.scss';
 
 .input__wrapper {
@@ -34,15 +32,19 @@ const value = ref('');
     border: 1px solid rgba(255, 255, 255, 0.15);
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 2px 0px 10px 0px rgba(6, 3, 9, 0.05), 30px 25px 48px 8px rgba(6, 3, 9, 0.10);
+}
 
-    &__btn {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 15%;
-        right: 5%;
-        border-radius: 15px;
-        background: rgba(255, 255, 255, 0.08);
-    }
+.input-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.input::placeholder {
+    font-weight: 500;
 }
 </style>

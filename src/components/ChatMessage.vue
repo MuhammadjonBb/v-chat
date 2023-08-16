@@ -10,7 +10,6 @@ const { user, author, msg, date, isNextReceived } = defineProps({
 })
 
 const cuttedTime = computed(() => date.slice(11, 16))
-console.log(isNextReceived);
 </script>
 
 <template>
@@ -33,7 +32,7 @@ console.log(isNextReceived);
 
     &__body {
         position: relative;
-        padding: 15px;
+        padding: 15px 55px 15px 15px;
         display: flex;
         max-width: 70%;
         margin: 0 0 0 auto;
@@ -56,6 +55,7 @@ console.log(isNextReceived);
     }
 
     &__name {
+        margin: 0 0 5px 0;
         color: #fff;
         font-weight: 600;
     }
@@ -63,7 +63,6 @@ console.log(isNextReceived);
     &__text {
         color: $secondary-text-color;
         font-weight: 500;
-        max-width: 80%;
         line-height: 28px;
     }
 
