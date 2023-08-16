@@ -59,6 +59,8 @@ function calcLastActive() {
     border-bottom: 1px solid rgba($color: $primary-text-color, $alpha: 0.5);
     z-index: 2;
     background-color: rgb(35, 29, 39);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
     &__user {
         display: flex;

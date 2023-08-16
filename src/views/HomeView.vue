@@ -1,6 +1,5 @@
 <script setup>
-import SearchPanel from '@/components/SearchPanel.vue';
-import UsersList from '@/components/UsersList.vue';
+import UsersList from '@/components/UsersSide.vue';
 import ChatWindow from '@/components/ChatWindow.vue';
 import ChatHeader from '@/components/ChatHeader.vue';
 import { useUsersStore } from '@/stores/users';
@@ -12,9 +11,6 @@ const store = useUsersStore();
   <main class="main">
     <div class="wrapper">
       <div class="users">
-        <div class="users__search-wrap">
-          <SearchPanel class="users__input" />
-        </div>
         <UsersList />
       </div>
       <div class="chat">
@@ -25,14 +21,13 @@ const store = useUsersStore();
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/variables.scss';
 
 .main {
   display: flex;
   width: 100vw;
   height: 100vh;
-  padding: 5%;
   background-color: $primary-color;
 }
 
@@ -40,6 +35,7 @@ const store = useUsersStore();
   display: flex;
   width: 100%;
   height: 100%;
+  padding: 5%;
   gap: 60px;
 }
 
@@ -54,27 +50,21 @@ const store = useUsersStore();
   box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
   border: 1px solid rgba($color: #fff, $alpha: 0.1);
   backdrop-filter: blur(10px);
-
-  &__search-wrap {
-    position: sticky;
-    top: 0;
-    padding: 30px;
-    width: 100%;
-    z-index: 2;
-    background-color: rgb(35, 29, 39);
-  }
 }
 
-.users::-webkit-scrollbar {
+.users::-webkit-scrollbar,
+.chat__window::-webkit-scrollbar {
   width: 3px;
 }
 
-.users::-webkit-scrollbar-thumb {
+.users::-webkit-scrollbar-thumb,
+.chat__window::-webkit-scrollbar-thumb {
   background-color: rgba(125, 119, 129, 0.3);
   border-radius: 2px;
 }
 
-.users::-webkit-scrollbar-thumb:hover {
+.users::-webkit-scrollbar-thumb:hover,
+.chat__window::-webkit-scrollbar-thumb:hover {
   background-color: #555;
   /* Set the color of the thumb on hover */
 }
