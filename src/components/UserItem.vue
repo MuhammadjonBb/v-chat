@@ -87,6 +87,11 @@ function cutDate(date) {
 
 @media screen and (max-width: 1280px) {
     .user-item {
+
+        &__wrapper {
+            padding: 20px 20px 0 20px;
+        }
+
         &__name {
             font-size: 14px;
         }

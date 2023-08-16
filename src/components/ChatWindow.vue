@@ -42,4 +42,15 @@ const user = computed(() => store.users.find(user => user.id == route.params.id)
         border-top: 1px solid $primary-text-color;
     }
 }
+
+@media screen and (max-width: 1280px) {
+    .chat__window {
+        padding: 20px;
+    }
+
+    .chat__form {
+        padding: 20px;
+    }
+
+}
 </style>

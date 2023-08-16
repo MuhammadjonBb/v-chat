@@ -97,6 +97,10 @@ const cuttedTime = computed(() => date.slice(11, 16))
             line-height: 24px;
         }
 
+        &__body {
+            margin-top: 10px;
+        }
+
         &__name {
             display: none;
         }

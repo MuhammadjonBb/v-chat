@@ -3,21 +3,35 @@ import UsersList from '@/components/UsersSide.vue';
 import ChatWindow from '@/components/ChatWindow.vue';
 import ChatHeader from '@/components/ChatHeader.vue';
 import { useUsersStore } from '@/stores/users';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const store = useUsersStore();
+const screenWidth = ref(window.innerWidth);
+
+const updateScreenWidth = () => {
+  screenWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener('resize', updateScreenWidth);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateScreenWidth);
+});
 </script>
 
 <template>
   <main class="main">
     <div class="wrapper">
-      <div class="users">
-        <UsersList v-if="store.users" />
-        <div v-else class="chat-empty chat-empty--users">
+      <div class="users" v-if="!$route.params.id || screenWidth > 1025">
+        <UsersList />
+        <div v-if="store.users.length" class="chat-empty chat-empty--users">
           <p class="chat-empty__text">Тут пусто </p>
           <p class="chat-empty__text--small">Вы еще никому не писали</p>
         </div>
       </div>
-      <div class="chat">
+      <div class="chat" v-if="$route.params.id || screenWidth > 1025">
         <ChatHeader v-if="store && $route.params.id" :users="store.users" />
         <ChatWindow v-if="store && $route.params.id" :users="store.users" />
         <div class="chat-empty" v-else>
@@ -118,6 +132,26 @@ const store = useUsersStore();
     padding: 30px;
     justify-content: start;
     align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      justify-content: center;
+    }
+
+    .chat {
+      width: 100%;
+    }
+
+    .users {
+      width: 100%;
+    }
   }
 }
 </style>

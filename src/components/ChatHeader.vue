@@ -138,6 +138,7 @@ function calcLastActive() {
 
 @media screen and (max-width: 480px) {
     .header {
+        padding: 20px;
 
         &__name {
             font-size: 13px;
