@@ -10,7 +10,7 @@ function cutDate(date) {
 
 <template>
     <div class="user-item__wrapper">
-        <img :src="user.image" alt="img" class="user-item__img">
+        <img :src="user.avatar" alt="img" class="user-item__img">
         <div>
             <h3 class="user-item__name">{{ user.name }}</h3>
             <span class="user-item__last-message">{{ cutDate(user.chat[user.chat.length - 1].date) }}</span>

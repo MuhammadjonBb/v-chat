@@ -1,8 +1,9 @@
 export default [
     {
         id: 2,
+        lastActive: "2020-01-01 00:00:00",
         name: 'Leanne Graham',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',
@@ -23,8 +24,9 @@ export default [
     },
     {
         id: 3,
+        lastActive: "2020-01-01 00:00:00",
         name: 'Leanne Shampton',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',
@@ -45,8 +47,9 @@ export default [
     },
     {
         id: 4,
+        lastActive: "2020-01-01 00:00:00",
         name: 'Priscilla Graham',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',
@@ -67,8 +70,9 @@ export default [
     },
     {
         id: 5,
+        lastActive: "2020-01-01 00:00:00",
         name: 'Devon Graham',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',
@@ -89,8 +93,9 @@ export default [
     },
     {
         id: 6,
+        lastActive: "2020-01-01 00:00:00",
         name: 'Francesca Graham',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',
@@ -111,8 +116,9 @@ export default [
     },
     {
         id: 7,
+        lastActive: "2020-01-01 00:00:00",
         name: 'Zechariah Edwards',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',
@@ -133,8 +139,9 @@ export default [
     },
     {
         id: 8,
+        lastActive: "2020-01-01 00:00:00",
         name: 'Adam Smith',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',
@@ -155,8 +162,9 @@ export default [
     },
     {
         id: 9,
+        lastActive: "2020-01-01 00:00:00",
         name: 'William Smith',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',
@@ -177,8 +185,9 @@ export default [
     },
     {
         id: 10,
+        lastActive: "2020-01-01 00:00:00",
         name: 'Bill Smith',
-        image: 'https://picsum.photos/100',
+        avatar: 'https://picsum.photos/100',
         chat: [
             {
                 date: '2020-01-01 00:00:00',

@@ -8,7 +8,8 @@ const store = useUsersStore();
 
 <template>
     <div class="user__list" v-if="store.users">
-        <UserItem v-for="user in store.users" :key="user.id" :user="user" />
+        <UserItem v-for="user in store.users" :key="user.id" :user="user"
+            @click="$router.push({ name: 'chat', params: { id: user.id } })" />
     </div>
 </template>
 
