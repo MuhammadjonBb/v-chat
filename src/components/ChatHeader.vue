@@ -25,6 +25,8 @@ function calcLastActive() {
         return 'Вчера';
     } else if (diffDays < 7) {
         return `неделю назад`;
+    } else if (diffDays < 30) {
+        return `месяц назад`;
     } else {
         return `давно`;
     }
@@ -34,7 +36,7 @@ function calcLastActive() {
 <template>
     <header class="chat__header header" v-if="user">
         <div class="header__user">
-            <button class="btn header__btn--back" @click="$router.go(-1)"><img src="@/assets/img/arrow.svg"
+            <button class="btn header__btn--back" @click="$router.push({ name: 'home' })"><img src="@/assets/img/arrow.svg"
                     alt="Назад"></button>
             <img :src="user.avatar" alt="avatar" class="header__avatar">
             <div class="header__user-info">
@@ -77,6 +79,7 @@ function calcLastActive() {
         height: 60px;
         border-radius: 15px;
         border: 1px solid rgba(255, 255, 255, 0.05);
+        object-fit: cover;
     }
 
     &__user-info {

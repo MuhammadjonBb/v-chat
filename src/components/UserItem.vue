@@ -9,8 +9,10 @@ function cutDate(date) {
 </script>
 
 <template>
-    <div class="user-item__wrapper">
-        <img :src="user.avatar" alt="img" class="user-item__img">
+    <div class="user-item__wrapper" :class="{ 'active': $route.params.id == user.id }">
+        <div class="user-item__avatar-wrap">
+            <img :src="user.avatar" alt="Avatar" class="user-item__img">
+        </div>
         <div class="user-item__info">
             <h3 class="user-item__name">{{ user.name }}</h3>
             <span class="user-item__last-message">{{ cutDate(user.chat[user.chat.length - 1].date) }}</span>
@@ -38,6 +40,13 @@ function cutDate(date) {
         width: 75px;
         height: 75px;
         border-radius: 15px;
+        object-fit: cover;
+    }
+
+    &__avatar-wrap {
+        width: 75px;
+        height: 75px;
+        display: flex;
     }
 
     &__info {
@@ -71,6 +80,7 @@ function cutDate(date) {
         max-width: 90%;
         overflow: hidden;
         font-size: 14px;
+        height: 48px;
         font-weight: 500;
         color: rgba($color: $primary-text-color, $alpha: 0.7);
         margin: 0;
@@ -79,7 +89,7 @@ function cutDate(date) {
 
     &__border {
         display: block;
-        margin-top: 30px;
+        margin-top: 20px;
         border-bottom: 1px solid rgba($color: $primary-text-color, $alpha: 0.2);
         height: 1px;
         width: 100%;
@@ -89,6 +99,10 @@ function cutDate(date) {
 .user-item__wrapper:hover {
     background-color: $dark-purple;
     cursor: pointer;
+}
+
+.user-item__wrapper.active {
+    background-color: $dark-purple;
 }
 
 @media screen and (max-width: 1280px) {
@@ -105,11 +119,35 @@ function cutDate(date) {
         &__message {
             font-size: 12px;
             line-height: 20px;
+            height: 40px;
         }
 
         &__last-message {
             font-size: 12px;
         }
     }
+}
+
+@media screen and (max-width: 1024px) {
+    .user-item {
+        &__wrapper {
+            padding: 10px 15px 0 15px;
+        }
+
+        &__img {
+            width: 55px;
+            height: 55px;
+        }
+
+        &__message {
+            height: auto;
+        }
+
+        &__avatar-wrap {
+            width: 55px;
+            height: 55px;
+        }
+    }
+
 }
 </style>

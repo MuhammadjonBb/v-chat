@@ -27,6 +27,7 @@ const user = computed(() => store.users.find(user => user.id == route.params.id)
 .chat {
     &__wrapper {
         height: 100%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -40,6 +41,13 @@ const user = computed(() => store.users.find(user => user.id == route.params.id)
     &__form {
         padding: 30px;
         border-top: 1px solid $primary-text-color;
+        z-index: 2;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(35, 29, 39);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 }
 
@@ -50,17 +58,13 @@ const user = computed(() => store.users.find(user => user.id == route.params.id)
 
     .chat__form {
         padding: 20px;
-        background-color: rgb(35, 29, 39);
-        position: sticky;
-        bottom: 0;
-        width: 100%;
-        background-color: rgb(35, 29, 39);
     }
 }
 
 @media screen and (max-width: 580px) {
     .chat__window {
         padding: 20px 15px;
+        border-radius: 0;
     }
 
 }

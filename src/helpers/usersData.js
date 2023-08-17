@@ -1,209 +1,345 @@
 export default [
     {
-        id: 2,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'Leanne Graham',
-        avatar: 'https://picsum.photos/100',
+        id: 4,
+        lastActive: "2023-07-23 21:21:33",
+        name: 'Amelie Griffith',
+        avatar: 'https://cdn.pixabay.com/photo/2023/07/25/17/10/bird-8149449_1280.jpg',
         chat: [
             {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsum dolor sit amet, consecte amet, consectetur adipiscing elit.',
+                date: '2023-01-01 00:00:00',
+                message: 'Ты пьешь чай?',
+                user_id: 4
+            },
+            {
+                date: '2023-01-02 21:21:11',
+                message: 'Да, я люблю чай. Это мой любимый напиток.',
+                user_id: 1
+            },
+            {
+                date: '2023-01-03 21:21:11',
+                message: 'Какой чай ты предпочитаешь?',
+                user_id: 4
+            },
+            {
+                date: '2023-01-03 21:22:11',
+                message: 'Мне нравится черный чай. А ты?',
+                user_id: 1
+            },
+            {
+                date: '2023-01-03 21:23:11',
+                message: ' Я люблю зеленый чай.',
+                user_id: 4
+            },
+            {
+                date: '2023-01-03 21:24:11',
+                message: 'Зелёный чай тоже хорош. Он очень полезный.',
+                user_id: 1
+            },
+            {
+                date: '2023-01-03 21:25:11',
+                message: 'Я пью чай каждый день. Он помогает мне проснуться утром и расслабиться вечером.',
+                user_id: 1
+            }
+        ]
+    },
+
+    {
+        id: 6,
+        lastActive: "2023-07-13 21:21:33",
+        name: 'Francesca Graham',
+        avatar: 'https://cdn.pixabay.com/photo/2023/08/07/03/59/coffee-8174279_1280.jpg',
+        chat: [
+            {
+                date: '2023-04-01 00:00:00',
+                message: 'Привет, ты слышал про Vue.js?',
+                user_id: 6
+            },
+            {
+                date: '2023-04-02 21:21:11',
+                message: 'Да, я слышал. Это фреймворк JavaScript для создания пользовательских интерфейсов.',
+                user_id: 1
+            },
+            {
+                date: '2023-04-03 21:24:11',
+                message: 'Да, именно. Он довольно популярен в последнее время.',
+                user_id: 6
+            },
+            {
+                date: '2023-04-03 21:41:11',
+                message: 'Я понимаю, почему. Он выглядит очень мощным и гибким.',
+                user_id: 1
+            },
+            {
+                date: '2023-04-03 21:51:11',
+                message: 'Да, это так. Он также очень легковесный, что делает его идеальным для создания небольших веб-приложений.',
+                user_id: 6
+            },
+            {
+                date: '2023-04-03 22:21:11',
+                message: ' Я думаю, я попробую его в своем следующем проекте.',
+                user_id: 1
+            },
+            {
+                date: '2023-04-03 23:21:11',
+                message: 'Отлично! Думаю, тебе понравится.',
+                user_id: 6
+            },
+        ]
+    },
+    {
+        id: 7,
+        lastActive: "2023-08-16 13:24:33",
+        name: 'Zechariah Edwards',
+        avatar: 'https://cdn.pixabay.com/photo/2020/10/20/18/02/bread-5671124_1280.jpg',
+        chat: [
+            {
+                date: '2023-01-01 21:00:00',
+                message: 'Я так люблю хлеб!',
+                user_id: 7
+            },
+            {
+                date: '2023-01-02 21:22:11',
+                message: 'Да, хлеб - это вкусная и универсальная еда.',
+                user_id: 1
+            },
+            {
+                date: '2023-01-03 22:21:11',
+                message: ' Я знаю, правда? Его можно употреблять в пищу в разных формах.',
+                user_id: 7
+            },
+            {
+                date: '2023-01-03 07:21:11',
+                message: ' Да, можно есть хлеб с маслом и джемом, использовать его для приготовления бутербродов или сэндвичей, или даже есть его просто так.',
+                user_id: 1
+            },
+            {
+                date: '2023-01-03 08:21:11',
+                message: 'Я люблю есть хлеб с супом.',
+                user_id: 7
+            },
+            {
+                date: '2023-01-03 13:13:11',
+                message: 'Это тоже отличный способ насладиться хлебом.',
+                user_id: 1
+            },
+            {
+                date: '2023-01-03 13:21:11',
+                message: 'Я думаю, хлеб - это одна из самых вкусных вещей в мире.',
+                user_id: 7
+            },
+            {
+                date: '2023-01-03 14:11:11',
+                message: 'Я согласен. Хлеб - это настоящий дар.',
+                user_id: 1
+            },
+        ]
+    },
+    {
+        id: 8,
+        lastActive: "2023-08-11 14:01:33",
+        name: 'Adam Smith',
+        avatar: 'https://cdn.pixabay.com/photo/2021/11/07/00/24/astronaut-6774653_1280.jpg',
+        chat: [
+            {
+                date: '2023-07-07 11:22:00',
+                message: 'Ты веришь в НЛО?',
+                user_id: 8
+            },
+            {
+                date: '2023-07-02 21:25:11',
+                message: 'Я тоже думаю, что это возможно. Есть так много сообщений о НЛО, и некоторые из них очень правдоподобны.',
+                user_id: 1
+            },
+            {
+                date: '2023-07-03 21:34:11',
+                message: 'Да, я знаю.',
+                user_id: 8
+            },
+            {
+                date: '2023-07-03 21:54:11',
+                message: 'Я думаю, что важно держать свой ум открытым для возможности существования НЛО.',
+                user_id: 8
+            },
+            {
+                date: '2023-07-03 22:21:11',
+                message: 'Я согласен. Я думаю, что было бы здорово узнать, что мы не одни во Вселенной.',
+                user_id: 1
+            },
+            {
+                date: '2023-07-03 22:31:11',
+                message: 'Да, было бы здорово. Я думаю, что это было бы очень важно для нашего понимания места во Вселенной.',
+                user_id: 8
+            },
+            {
+                date: '2023-07-03 22:41:11',
+                message: 'Я надеюсь, что однажды мы узнаем правду о НЛО.',
+                user_id: 1
+            },
+            {
+                date: '2023-07-03 22:42:11',
+                message: 'Я тоже. Это было бы очень интересно узнать.',
+                user_id: 8
+            },
+        ]
+    },
+    {
+        id: 5,
+        lastActive: "2023-07-13 00:11:33",
+        name: 'Devon Sierra',
+        avatar: 'https://cdn.pixabay.com/photo/2023/08/02/14/56/animal-8165466_1280.jpg',
+        chat: [
+            {
+                date: '2023-05-01 13:31:00',
+                message: 'Ты видел новый Porsche 911?',
+                user_id: 5
+            },
+            {
+                date: '2023-06-02 14:21:11',
+                message: 'Он потрясающий! Мне нравится новый дизайн и мощный двигатель.',
+                user_id: 1
+            },
+            {
+                date: '2023-06-03 15:21:11',
+                message: 'Это мечта любого водителя.',
+                user_id: 5
+            }
+        ]
+    },
+    {
+        id: 9,
+        lastActive: "2023-08-16 16:45:33",
+        name: 'William Smith',
+        avatar: 'https://cdn.pixabay.com/photo/2019/05/29/16/00/retro-4237850_1280.jpg',
+        chat: [
+            {
+                date: '2023-01-01 14:10:00',
+                message: 'Знаешь, что находится в центре Земли?',
+                user_id: 9
+            },
+            {
+                date: '2023-01-01 14:11:00',
+                message: 'Я думаю, что это ядро.',
+                user_id: 1
+            },
+            {
+                date: '2023-01-01 15:15:00',
+                message: 'Правильно!',
+                user_id: 9
+            },
+            {
+                date: '2023-01-01 15:16:00',
+                message: 'Ядро Земли - это самая горячая и плотная часть планеты. Оно состоит из железа и никеля, и его температура достигает 6000 градусов по Цельсию.',
+                user_id: 9
+            },
+
+            {
+                date: '2023-01-01 15:17:00',
+                message: ' Это очень горячо!',
+                user_id: 1
+            },
+            {
+                date: '2023-01-01 15:18:00',
+                message: 'Да, действительно. Ядро Земли настолько горячее, что оно плавится. Внутреннее ядро Земли - это твердое ядро, которое находится в центре планеты. Оно окружено жидким внешним ядром.',
+                user_id: 9
+            },
+            {
+                date: '2023-01-01 15:19:00',
+                message: ' А что делает ядро Земли?',
+                user_id: 1
+            },
+            {
+                date: '2023-01-01 15:20:00',
+                message: 'Ядро Земли отвечает за магнитное поле Земли. Магнитное поле Земли защищает нас от вредного космического излучения. Оно также помогает нам ориентироваться в пространстве.',
+                user_id: 9
+            },
+            {
+                date: '2023-01-01 15:21:00',
+                message: 'Это здорово! Я не знал, что ядро Земли так важно.',
+                user_id: 1
+            },
+
+        ]
+    },
+    {
+        id: 2,
+        lastActive: "2023-08-03 21:21:33",
+        name: 'Leanne Kramer',
+        avatar: 'https://cdn.pixabay.com/photo/2016/03/23/15/00/ice-cream-1274894_1280.jpg',
+        chat: [
+            {
+                date: '2023-01-03 12:34:33',
+                message: 'Привет',
                 user_id: 2
             },
             {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, conselor sit amet, psum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                date: "2023-01-03 12:34:42",
+                message: 'Привет! Как дела?',
+                user_id: 1
+            },
+            {
+                date: "2023-01-03 21:21:11",
+                message: "У меня все хорошо, спасибо, что спросил. А у тебя как дела?",
+                user_id: 1
+            },
+            {
+                date: "20203-01-03 21:21:22",
+                message: "У меня тоже все хорошо, спасибо за беспокойство. Я занят сейчас, но позже свяжусь с тобой",
                 user_id: 2
             },
             {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ior sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                date: "2023-01-03 21:21:33",
+                message: "Хорошо, я буду ждать твоего звонка",
                 user_id: 1
             }
         ]
     },
     {
         id: 3,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'Leanne Shampton',
-        avatar: 'https://picsum.photos/100',
+        lastActive: "2023-07-17 21:21:51",
+        name: 'Saige Shampton',
+        avatar: 'https://cdn.pixabay.com/photo/2022/02/13/14/50/space-7011298_1280.jpg',
         chat: [
+
             {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                date: "2023-05-03 21:21:11",
+                message: "Ты слышал про Web3.0?",
                 user_id: 3
             },
             {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetuit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                date: "2023-05-03 21:22:21",
+                message: "Это следующее поколение интернета, которое будет основано на технологиях блокчейна и децентрализации.",
                 user_id: 3
             },
             {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ipsum dolor sirem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                date: "2023-05-03 21:23:31",
+                message: "Звучит интересно. Какие преимущества у него будут?",
+                user_id: 1
+            },
+            {
+                date: "2023-05-03 21:24:41",
+                message: "Он будет более безопасным, конфиденциальным и прозрачным, чем текущий интернет. Пользователи также будут иметь больше контроля над своими данными.",
+                user_id: 3
+            },
+            {
+                date: "2023-05-03 21:25:51",
+                message: "Это звучит здорово! Когда он появится?",
+                user_id: 1
+            },
+            {
+                date: "2023-05-03 21:26:51",
+                message: "Он уже начинает появляться, но потребуется некоторое время, чтобы он полностью развился.",
+                user_id: 3
+            },
+            {
+                date: "2023-05-03 21:27:51",
+                message: "Я с нетерпением жду Web3.0!",
+                user_id: 1
+            },
+            {
+                date: "2023-05-03 21:28:51",
+                message: "Это будет настоящая революция в интернете.",
                 user_id: 1
             }
         ]
     },
-    {
-        id: 4,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'Priscilla Graham',
-        avatar: 'https://picsum.photos/100',
-        chat: [
-            {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 4
-            },
-            {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            },
-            {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            }
-        ]
-    },
-    {
-        id: 5,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'Devon Graham',
-        avatar: 'https://picsum.photos/100',
-        chat: [
-            {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsuiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 5
-            },
-            {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 5
-            },
-            {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipselit.',
-                user_id: 1
-            }
-        ]
-    },
-    {
-        id: 6,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'Francesca Graham',
-        avatar: 'https://picsum.photos/100',
-        chat: [
-            {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor ing elit.',
-                user_id: 6
-            },
-            {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amg elit.',
-                user_id: 1
-            },
-            {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            }
-        ]
-    },
-    {
-        id: 7,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'Zechariah Edwards',
-        avatar: 'https://picsum.photos/100',
-        chat: [
-            {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitipiscing elit.',
-                user_id: 7
-            },
-            {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Loctetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            },
-            {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit ametr adipiscing elit.',
-                user_id: 1
-            }
-        ]
-    },
-    {
-        id: 8,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'Adam Smith',
-        avatar: 'https://picsum.photos/100',
-        chat: [
-            {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 8
-            },
-            {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur it.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            },
-            {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ipsum dolor sit a sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            }
-        ]
-    },
-    {
-        id: 9,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'William Smith',
-        avatar: 'https://picsum.photos/100',
-        chat: [
-            {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.dipiscing elit.',
-                user_id: 9
-            },
-            {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            },
-            {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, lor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            }
-        ]
-    },
-    {
-        id: 10,
-        lastActive: "2020-01-01 00:00:00",
-        name: 'Bill Smith',
-        avatar: 'https://picsum.photos/100',
-        chat: [
-            {
-                date: '2020-01-01 00:00:00',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 10
-            },
-            {
-                date: '2020-01-02 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Locing elit.Locing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            },
-            {
-                date: '2020-01-03 21:21:11',
-                message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, cont amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                user_id: 1
-            }
-        ]
-    }
 ]

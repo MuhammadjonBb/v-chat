@@ -46,6 +46,7 @@ const cuttedTime = computed(() => date.slice(11, 16))
 
     &__avatar {
         position: absolute;
+        object-fit: cover;
         z-index: 2;
         width: 50px;
         height: 50px;
@@ -77,7 +78,7 @@ const cuttedTime = computed(() => date.slice(11, 16))
 }
 
 .message.message--received .message__body {
-    margin: 0 auto 5px 70px;
+    margin: 5px auto 5px 70px;
     background-color: $secondary-color;
     border-radius: 30px 30px 30px 2px;
 }
@@ -111,6 +112,7 @@ const cuttedTime = computed(() => date.slice(11, 16))
 @media screen and (max-width: 580px) {
     .message {
         gap: 10px;
+        position: relative;
 
         &__text {
             font-size: 13px;
@@ -134,7 +136,7 @@ const cuttedTime = computed(() => date.slice(11, 16))
     }
 
     .message.message--received .message__body {
-        margin: 0 auto 5px 0;
+        margin: 10px auto 10px 0;
     }
 }
 </style>
