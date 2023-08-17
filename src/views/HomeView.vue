@@ -52,6 +52,7 @@ onUnmounted(() => {
   width: 100vw;
   height: 100vh;
   background-color: $primary-color;
+  background-image: url('@/assets/img/sparks.png');
 }
 
 .wrapper {

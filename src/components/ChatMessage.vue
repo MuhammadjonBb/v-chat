@@ -29,6 +29,7 @@ const cuttedTime = computed(() => date.slice(11, 16))
 .message {
     display: flex;
     gap: 20px;
+    position: relative;
 
     &__body {
         position: relative;
