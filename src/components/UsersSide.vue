@@ -58,4 +58,11 @@ function openChatWindow(id) {
         color: $golden-color;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .users__search-wrap {
+        padding: 20px;
+    }
+
+}
 </style>
